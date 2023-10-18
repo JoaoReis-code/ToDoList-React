@@ -1,10 +1,9 @@
-import React from "react";
 import style from './Botao.module.scss';
 
 
-function Botao({texto,type = "button"}:{texto:string, type?:"button" | "submit"}){
+function Botao({texto,type = "button",onClick}:{texto:string, type?:"button" | "submit", onClick?: () => void}){
         return(
-            <button type={type} className={style.botao}>
+            <button onClick={onClick} type={type} className={style.botao}>
                 {texto}
             </button>
         )
